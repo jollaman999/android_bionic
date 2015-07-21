@@ -1332,6 +1332,13 @@ LIBC {
     *;
 };
 
+LIBC_N {
+  global:
+    __pwrite_chk;
+    __pwrite64_chk;
+    __write_chk;
+} LIBC;
+
 LIBC_PRIVATE {
   global:
     ___Unwind_Backtrace; # arm
@@ -1453,4 +1460,4 @@ LIBC_PRIVATE {
     SHA1Init; # arm x86 mips
     SHA1Transform; # arm x86 mips
     SHA1Update; # arm x86 mips
-} LIBC;
+} LIBC_N;
